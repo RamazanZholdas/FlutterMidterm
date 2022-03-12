@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String _someText = "0";
-  var details = {};
   void changeValue(String str) {
     setState(() {
       if (str == "+/-") {
@@ -40,11 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
       else if (_someText == "0"){
         _someText = str;
       }else {
-        /*if (str == "+" || str == "-" || str == "*" || str == "/" || str == "%") {
-          details["o"] = str;
-        } else {
-          details["v"] = str;
-        }*/
         _someText += str;
       }
     });
@@ -53,15 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void calculate() {
 
     setState(() {
-      if (_someText == "3+3") {
-        _someText = "6";
-      } else if (_someText == "3/3") {
-        _someText = "1";
-      } else if (_someText == "1.4+1.6") {
-        _someText = "3.0";
-      } else if (_someText == "69*12") {
-        _someText = "828";
-      }
+
     });
   }
   @override

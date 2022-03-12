@@ -45,9 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void calculate() {
-
+    int a = 0;
+    String ops;
+    int index = 0;
     setState(() {
-
+      for(int i = 0; i <_someText.length; i++){
+        if (_someText.codeUnitAt(i) > 47 && _someText.codeUnitAt(i) < 58 && _someText.codeUnitAt(i+1) < 47
+            && _someText.codeUnitAt(i+1) < 58) {
+          a = int.parse(_someText.substring(index, i + 1));
+        }
+      }
     });
   }
   @override
